@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  overflow: hidden; /* 隱藏滾動條 */
+}
+
+/* 確保畫布填滿整個視口 */
+canvas {
+  display: block; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 選中的子選單保持紅色文字 (當滑鼠移出時) */
+#menu-controls button.active {
+    color: red !important;
+}
+
+/* 當滑鼠懸停在按鈕上時，顯示紅色文字 (覆蓋預設的黑色) */
+#menu-controls button:hover {
+    color: red !important;
+}
+
+/* 非選中且滑鼠移出時，顯示黑色文字 */
+#menu-controls button:not(.active):not(:hover) {
+    color: black !important;
+}
+
+/* p5.js 創建的按鈕基礎樣式 */
+#menu-controls button {
+    font-family: sans-serif; 
+}
